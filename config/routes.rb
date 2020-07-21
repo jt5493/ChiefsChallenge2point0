@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+#custom routes above
+  root 'sessions#home'
+  get '/signup' => 'users#new'
+
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+
+  delete '/logout' => 'sessions#delete'
+  
   resources :workouts
   resources :users
   resources :exercises
