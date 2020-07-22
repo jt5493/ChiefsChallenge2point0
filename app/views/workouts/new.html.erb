@@ -1,0 +1,16 @@
+Create A Workout
+
+<%= form_for(@workout) do |f| %>
+
+    <%= f.label :workout_date %>
+    <%= f.text_field :workout_date %>
+    <br>
+    <br>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <br>
+    <br>
+
+<%= f.submit  %>
+
+<% end %>

@@ -13,5 +13,6 @@ class SessionsController < ApplicationController
         else
             flash[:message] = "Username or Password was incorect."
             redirect_to "/login"
+        end
     end
 end
