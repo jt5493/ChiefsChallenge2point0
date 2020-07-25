@@ -7,9 +7,15 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
 
   delete '/logout' => 'sessions#delete'
+
+  get "/auth/google_oauth2/callback" => 'sessions#google'
   
-  resources :workouts
-  resources :users
+  resources :workouts do
+    resources :exercises, only: [:new, :create]
+  end
+  resources :users do
+    resources :workouts, only: [:index, :new, :create ]
+  end
   resources :exercises
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -1,3 +1,5 @@
-<h1> Welcome <%= @user.username %> </h1>
+<h1> <%= @user.username %> </h1>
 
+
+<%= link_to 'See all their workouts', user_workouts_path(@user)  %>
 

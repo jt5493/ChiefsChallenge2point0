@@ -1,0 +1,2 @@
+<%= f.label :exercies_done %>
+    <%= f.collection_check_boxes(:exercise_ids, Exercise.all, :id, :name)%>

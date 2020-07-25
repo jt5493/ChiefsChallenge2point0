@@ -1,1 +1,10 @@
-My Workout
+<h1> <%= @workout.user.username %>'s Workout </h1>
+
+Date completed: <%= @workout.workout_date %> <br> <br>
+
+<% @workout.exercises.each do |e| %>
+    <li><%= e.name %> - 
+    <%= e.value %> points</li>
+<% end %> <br>
+
+Points Total = <%= points_sum %>
