@@ -1,2 +1,1 @@
-<%= f.label :exercies_done %>
-    <%= f.collection_check_boxes(:exercise_ids, Exercise.all, :id, :name)%>
+scope method for displaying the users in order of points total to see who has the most
