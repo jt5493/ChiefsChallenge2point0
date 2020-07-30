@@ -8,3 +8,8 @@ Date completed: <%= @workout.workout_date %> <br> <br>
 <% end %> <br>
 
 Points Total = <%= points_sum %>
+<br> <br>
+
+<% if current_user == @workout.user%>
+    <%= link_to "Add a New Exercise", new_workout_exercise_path(@workout) %>
+<% end %>

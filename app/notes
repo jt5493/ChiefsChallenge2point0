@@ -1,1 +1,13 @@
 scope method for displaying the users in order of points total to see who has the most
+
+
+@user = User.find_or_create_by(username: auth["info"]["first_name"]) do |user|
+            user.username = auth["info"]["first_name"]
+            user.password = SecureRandom.hex(10)
+        end
+        if @user.save
+            session[:user_id] = @user.id
+            redirect_to user_path(@user)
+        else
+            redirect_to '/'
+        end

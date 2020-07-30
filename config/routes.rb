@@ -8,10 +8,10 @@ Rails.application.routes.draw do
 
   delete '/logout' => 'sessions#delete'
 
-  get "/auth/google_oauth2/callback" => 'sessions#google'
+  get "/auth/:provider/callback" => 'sessions#google'
   
   resources :workouts do
-    resources :exercises, only: [:new, :create]
+    resources :exercises, only: [:index, :new, :create]
   end
   resources :users do
     resources :workouts, only: [:index, :new, :create ]

@@ -23,6 +23,7 @@ class WorkoutsController < ApplicationController
         @workout = current_user.workouts.build(workout_params)
         @workout.points_total = points_sum
         if @workout.save
+            
             redirect_to workout_path(@workout)
         else
             render :new
@@ -30,6 +31,7 @@ class WorkoutsController < ApplicationController
     end
 
     def show
+        
         @workout = Workout.find_by_id(params[:id])
 
     end
@@ -37,7 +39,8 @@ class WorkoutsController < ApplicationController
     private
 
     def workout_params
-        params.require(:workout).permit(:workout_date,
+        params.require(:workout).permit(
+            :workout_date,
             :points_total,
             :exercises_done,
             :exercise_quantity,
