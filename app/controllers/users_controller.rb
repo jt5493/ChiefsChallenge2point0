@@ -2,6 +2,9 @@ class UsersController < ApplicationController
 
     def index
         @users = User.all
+        if params[:search] && !params[:search].empty?
+            @users = @users.search(params[:search].downcase)
+        end
     end
 
     def new

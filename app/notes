@@ -11,3 +11,9 @@ scope method for displaying the users in order of points total to see who has th
         else
             redirect_to '/'
         end
+
+        <% @users.each do |u| %>
+    <li>
+       <%= link_to u.username, user_path(u) %>
+    </li>
+    <% end %>

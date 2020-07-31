@@ -14,4 +14,8 @@ class User < ApplicationRecord
           user.password = SecureRandom.hex
         end
     end
+
+    def self.search(search)
+      where("LOWER(username) = ?", search)
+    end
 end
