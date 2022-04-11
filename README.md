@@ -1,4 +1,4 @@
-# Chiefs Challenge
+# Chiefs Challenge 2.0
 
 This application was made for the NAS Whidbey Island Naval Survival Training Center crew. During the Covid-19 shutdown, members of the armed forces are prohibited from doing physical training with each other so some members of this center created a program to help keep people motivated to stay in shape. I wanted to create this program to help the members keep track of their progress without having to do it manually with pen and paper.
 
